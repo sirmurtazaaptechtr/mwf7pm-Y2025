@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;    
+    font-family: cursive;
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    background-color: black;
+    overflow: auto;
+    height: 60px;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li  {
+    margin: 16px 0px 0px 16px;
+    float: left;    
+}
+nav ul li:last-child {
+    float: right;
+    margin-right: 16px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover {
+    text-decoration: overline;
+    color: crimson;
+}
+
+.container {
+    background-color: wheat;
+    overflow: auto;
+}
+.box {
+    width: 225px;
+    border: 1px solid black;
+    /* float: left;         */
+}
+#b1 {
+    float: right;
+}
+
+#b2 {
+    float: left;
+}
+#b3 {
+    float: right;
+    /* clear: left; */
+}
+#b4 {
+    float: left;
+}

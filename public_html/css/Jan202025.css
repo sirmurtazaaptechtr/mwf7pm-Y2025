@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    background-color: black;
+    height: 50px;
+    text-align: right;   
+}
+nav ul  {
+    padding: 0px;
+    list-style: none;    
+}
+nav ul li {
+    display: inline-block;
+    margin: 14px 16px 0px 0px;
+    vertical-align: top;    
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;    
+}
+nav ul li a:hover {
+    color: wheat;
+    text-decoration: overline;
+}
+.box {
+    width: 225px;
+    border: 1px solid black;
+    padding: 6px;
+    margin: 16px;
+    display: inline-block;
+    box-shadow: 1px 1px 3px 1px black;
+}

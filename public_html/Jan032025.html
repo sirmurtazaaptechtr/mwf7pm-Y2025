@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables & Form in HTML</title>
+</head>
+<body>    
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th colspan="6"><h1>Student Table</h1></th>
+            </tr>
+            <tr>
+                <th>Sr.no</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Contact</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>            
+            <tr>
+                <td>1. </td>
+                <td>Mirza Muhammad Raahim Baig</td>
+                <td><a href="mailto:raahimmirza144@gmail.com">raahimmirza144@gmail.com</a></td>
+                <td>Male</td>
+                <td>+92-330-8151444</td>
+                <td><img src="images/raahim.jfif" alt="Mirza Muhammad Raahim Baig" height="100"></td>
+            </tr>
+            <tr>
+                <td>2. </td>
+                <td>Muhammad Shehriyar</td>
+                <td><a href="mailto:mshehriyar7860@gmail.com">mshehriyar7860@gmail.com</a></td>
+                <td>Male</td>
+                <td>+92-304-3637362</td>
+                <td><img src="images/Shehriyar.jfif" alt="Muhammad Shehriyar" height="100"></td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Registration From</h1>
+    <form>
+        <div>
+            <label for="fullName"><strong>Full Name</strong></label>
+            <input type="text" name="full_name" id="fullName">
+        </div>
+        <br>
+        <div>
+            <label for="email"><b>Email</b></label>
+            <input type="email" name="email_address" id="email">
+        </div>
+        <br>
+        <div>
+            <label for="dob"><b>Date of Birth</b></label>
+            <input type="date" name="dateofbirth" id="dob">
+        </div>
+        <br>
+        <div>
+            <label for="gender"><b>Gender</b></label>
+            <select name="gender" id="gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="O">Other</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label><b>Marital Status</b></label>
+            <input type="radio" name="marital_status" id="single">
+            <label for="single">Single</label>
+            <input type="radio" name="marital_status" id="married">
+            <label for="married">Married</label>
+            <input type="radio" name="marital_status" id="widowed">
+            <label for="widowed">Widowed</label>
+            <input type="radio" name="marital_status" id="divorced">
+            <label for="divorced">Divorced</label>
+        </div>
+        <br>
+        <div>
+            <label for=""><b>Hobbies</b></label>
+            <input type="checkbox" name="reading" id="reading">
+            <label for="reading">Reading</label>
+            <input type="checkbox" name="Cooking" id="Cooking">
+            <label for="Cooking">Cooking</label>
+            <input type="checkbox" name="Photography" id="Photography">
+            <label for="Photography">Photography</label>
+            <input type="checkbox" name="Gardening" id="Gardening">
+            <label for="Gardening">Gardening</label>
+            <input type="checkbox" name="Volunteering" id="Volunteering">
+            <label for="Volunteering">Volunteering</label>
+        </div>
+        <br>
+        <div>
+            <label for="phone"><b>Contact</b></label>
+            <input type="tel" name="phone" id="phone">
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="Clear">
+            <input type="submit" value="Save">
+        </div>
+    </form>
+</body>
+</html>

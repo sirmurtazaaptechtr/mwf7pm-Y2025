@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+        /* Basic Reset CSS */
+        * {
+            font-family: cursive;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        a {
+            text-decoration: none;
+            color: wheat;
+        }
+        ul {
+            list-style: none;            
+        }
+        
+        /* NavBar CSS */
+        nav {
+            background-color: black;
+            padding: 8px;
+            border-radius: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logoBox a img {
+            height: 50px;
+            border-radius: 100%;
+        }
+        nav ul {
+            flex-grow: 1;
+
+            display: flex;
+            justify-content: center;
+            column-gap: 16px;
+        }
+        nav ul li a:hover {
+            text-decoration: overline;
+            color: hotpink;
+        }
+        nav .searchBox input {
+            padding: 3px;
+            border-radius: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logoBox">
+            <a href=""><img src="images/redrose.jpg" alt="myLogo"></a>
+        </div>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Location</a></li>
+            <li><a href="">Career</a></li>
+        </ul>
+        <div class="searchBox">
+            <input type="text" placeholder="type here to search...">
+        </div>
+    </nav>
+    
+</body>
+</html>

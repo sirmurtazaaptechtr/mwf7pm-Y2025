@@ -1,0 +1,17 @@
+h1, h2 {
+    color: tomato;
+    text-align: center;
+}
+p {
+    color: green;
+    text-align: center;
+    margin: auto;
+    width: 480px;
+}
+#p2 {
+    color: black;
+}
+.para1 {
+    border: 2px solid gold;
+    background-color: silver;
+}
