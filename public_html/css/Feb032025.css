@@ -1,0 +1,78 @@
+* {
+    font-family: cursive;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style: none;    
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.border-dot-red {
+    border: 1px dotted red;
+}
+.p-3 {
+    padding: 32px;
+}
+
+header {
+    grid-area: hdr;    
+}
+/* NavBar CSS */
+nav {
+    background-color: black;
+    padding: 8px;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: nav;
+}
+nav .logoBox a img {
+    height: 50px;
+    border-radius: 100%;
+}
+nav ul {
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+}
+nav ul li a:hover {
+    text-decoration: overline;
+    color: hotpink;
+}
+nav .searchBox input {
+    padding: 3px;
+    border-radius: 12px;
+}
+
+aside {
+    grid-area: asd;
+}
+article {
+    grid-area: art;
+}
+main {
+    grid-area: con;
+}
+footer {
+    grid-area: ftr;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    'hdr hdr hdr hdr'
+    'nav nav nav nav'
+    'asd con con art'
+    'asd con con .'
+    '. ftr ftr .'
+    ;
+}
