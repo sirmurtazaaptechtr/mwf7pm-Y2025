@@ -1,0 +1,116 @@
+* {
+    text-align: center;
+    font-family: cursive;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    display: grid;
+    width: 75vw;
+    margin: auto;        
+}
+header {
+    grid-area: hdr;
+    background-color: #0F1629;
+    color: whitesmoke;
+    height: 10vh;
+}
+nav {
+    grid-area: nav;
+    background-color: #EF3D4D;
+    color: whitesmoke;
+    height: 10vh;
+}
+#hero {
+    grid-area: hro;
+    background-color: #4C86C6;
+    color: whitesmoke;
+    height: 30vh;
+}
+main {
+    grid-area: man;
+    background-color: #24344B;
+    color: whitesmoke;
+    height: 20vh;
+}
+#image {
+    grid-area: img;
+    background-color: #C1E4E6;
+    height: 10vh;
+}
+#extra {
+    grid-area: ext;
+    background-color: #4DBD97;
+    height: 10vh;
+}
+footer {
+    grid-area: ftr;
+    background-color: #FED269;
+    height: 10vh;
+}
+
+
+
+/* Media Queries */
+
+/* Large Desktop */
+@media only screen and (min-width:1200px) {
+    body {        
+        grid-template-areas: 
+        'hdr nav nav nav'
+        'hro hro hro hro'
+        'man man . img'
+        'man man . ext'
+        'ftr ftr ftr ftr'
+        ;
+    }
+    
+}
+
+/* Desktop */
+@media only screen and (max-width:1199px) and (min-width:992px) {
+    body {
+        grid-template-areas: 
+        'hdr nav nav nav'
+        'hro hro hro hro'
+        'man man . img'
+        'man man . ext'
+        'ftr ftr ftr ftr'
+        ;
+    }    
+}
+
+/* Tablets */
+@media only screen and (max-width:991px) and (min-width:768px) {
+    body {
+        grid-template-areas: 
+        'hdr hdr hdr hdr'
+        'hro hro hro hro'
+        'nav man man man'
+        'nav ftr ftr ftr'
+        'nav ext ext img'
+        ;
+    }
+    nav {
+        height: 40vh;
+    }    
+}
+
+/* Phone */
+@media only screen and (max-width:767px) {
+    body {
+        width: 100vw;
+        margin: 0px;
+        grid-template-areas: 
+        'hdr'
+        'nav'
+        'hro'
+        'man'
+        'ftr'
+        'ext'
+        'img'
+        ;
+    }
+    
+}
