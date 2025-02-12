@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Units & Selectors</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        html {
+            font-size: 16px;
+        }
+        div {
+            font-size: 18px;
+        }
+        p {
+            /* font-size: 1em;; */
+            font-size: 1rem;;
+        }
+        h1 {
+            /* font-size: 40px; */
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        .container {
+            border: 1px solid green;
+            width: 75%;
+            /* width: 75vw; */
+        }
+        #p1 {
+            width: 50%;
+        }
+        #p2 {
+            width: 50vw;
+        }
+
+        div,  p {
+            background-color: bisque;
+        }
+
+        div p  {
+            color: red;
+        }
+
+        div > p {
+            color: green;
+        }
+
+        div + p {
+            color: tomato;
+        }
+
+        li:first-child, li:first-child a {
+            color: brown;
+        }
+
+        li:last-child, li:last-child a  {
+            color: indigo;
+        }
+
+        li:nth-child(even) {
+            background-color: aquamarine;
+        }
+        li:nth-child(odd) {
+            background-color: aqua;
+        }
+
+        li:nth-child(2n+5) {
+            color: hotpink;
+        }
+
+        input[type="text"] {
+            background-color: rosybrown;
+        }
+
+        input[type="password"] {
+            background-color: teal;
+        }
+        
+
+
+
+        
+
+
+    </style>
+</head>
+<body>
+    <h1>Responsive Units & Selectors</h1>
+    <div class="container">
+        <div class="box" id="b1">
+            <h2>box-1</h2>
+            <p id="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum eveniet repudiandae hic corrupti, rem molestias magni, adipisci nobis aliquid nostrum quos quaerat placeat illo doloribus ratione qui suscipit temporibus. Architecto?</p>
+            <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, animi porro expedita nemo eius quos quia voluptate temporibus suscipit inventore provident corrupti esse mollitia consequatur assumenda autem ipsum! Rem, asperiores.</p>
+        </div>
+        <div class="box" id="b2">
+            <h2>box-2</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum eveniet repudiandae hic corrupti, rem molestias magni, adipisci nobis aliquid nostrum quos quaerat placeat illo doloribus ratione qui suscipit temporibus. Architecto?</p>
+        </div>
+        <div class="box" id="b3">
+            <h2>box-3</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum eveniet repudiandae hic corrupti, rem molestias magni, adipisci nobis aliquid nostrum quos quaerat placeat illo doloribus ratione qui suscipit temporibus. Architecto?</p>
+        </div>
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore qui maiores quas quidem minima alias. Totam ipsa rem, placeat possimus qui sunt ipsum fugit inventore. Nobis recusandae magni porro tenetur.</p>
+        </article>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni perspiciatis laudantium consequuntur ea, sequi nostrum deserunt atque, excepturi enim reprehenderit incidunt necessitatibus a nulla voluptates ipsum architecto tempore sint deleniti.</p>
+
+    <ul>
+        <li>item # <b>1</b></li>
+        <li>item # <b>2</b></li>
+        <li>item # <b>3</b></li>
+        <li>item # <b>4</b></li>
+        <li>item # <b>5</b></li>
+        <li>item # <b>6</b></li>
+        <li>item # <b>7</b></li>
+        <li>item # <b>8</b></li>
+        <li>item # <b>9</b></li>
+    </ul>
+
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+
+    <label for="">Name :</label>
+    <input type="text">
+    
+    <label for="">Email :</label>
+    <input type="email">
+
+    <label for="">Password</label>
+    <input type="password">
+
+    <label for="">Phone</label>
+    <input type="tel">
+    
+</body>
+</html>
