@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation & Transition</title>
+    <style>
+        * {
+            font-family: cursive;
+            box-sizing: border-box;
+            margin: 0px;padding: 0px;
+        }
+        .box {
+            position: relative;
+            width: 75%;
+            margin: 16px auto; 
+            padding: 16px;
+            box-shadow: 2px 3px 3px 0px black;
+            background-color: black;
+            color: wheat;
+            border: 1px solid wheat;
+            transition-property: all;
+            transition-duration: 3s;
+            transition-timing-function: ease;
+            transition-delay: 100ms;        
+        }
+        .box:hover {           
+            background-color: wheat;
+            color: black;
+            border: 1px solid black;
+            
+            transform: translate(0, 20vh) rotate(360deg);
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Animation & Transition <a href="https://www.w3schools.com/Css/css3_2dtransforms.asp">read more</a></h1>
+
+    <div id="b1" class="box">
+        <h2>My Heading</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint iusto eum odit exercitationem, maiores architecto iste. Adipisci illo consequuntur facilis architecto! Dolorum magni ullam, commodi cumque illo pariatur iste at.</p>
+    </div>
+    
+</body>
+</html>
