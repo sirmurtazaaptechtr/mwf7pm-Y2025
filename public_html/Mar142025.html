@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * Function to make tea for a given number of persons
+         * @param {number} persons - Number of persons to make tea for
+         */
+        function makeTea(persons) {
+            let milkQty = persons * 200; // 200ml milk per person
+            let sugarQty = persons * 2; // 2g sugar per person
+    
+            console.log(`Step 1: Measure and pour ${milkQty}ml of milk into a large pot.`);
+            console.log(`Step 2: Add ${sugarQty}g of sugar into the pot. Adjust to taste if needed.`);
+            console.log("Step 3: Add tea leaves or tea bags based on preference.");
+            console.log("Step 4: Bring the mixture to a gentle boil while stirring occasionally.");
+            console.log("Step 5: Let it simmer for about 30 minutes to enhance the flavors.");
+            console.log("_______ Tea is ready to be served for ${persons} persons! Enjoy your tea! _______");
+        }
+    
+        /**
+         * Function to wash clothes using a washing machine
+         */
+        function washClothes() {
+            console.log("Step 1: Add water to the washing machine up to the recommended level.");
+            console.log("Step 2: Pour in the appropriate amount of detergent based on your laundry load.");
+            console.log("Step 3: Place the dirty clothes evenly in the washing machine drum.");
+            console.log("Step 4: Select the appropriate washing cycle and start the machine.");
+            console.log("Step 5: Let the machine run for the specified time, typically around 15 minutes.");
+            console.log("_______________ Your clothes are now clean and fresh! ______________");
+        }
+    
+        /**
+         * Function to calculate the square of a number and check if it's even
+         * @param {number} number - The number to calculate
+         * @returns {Array} result - Array containing the square of the number and whether it is even
+         */
+        function calc(number) {
+            let result = [];
+            let square = number * number;
+    
+            result.push({square: square});
+            if (number % 2 === 0) {
+                result.push({isEven: true});
+            } else {
+                result.push({isEven: false});
+            }
+    
+            return result;
+        }
+    
+        // Example usage of the functions
+        makeTea(3);
+        washClothes();
+        makeTea(10);
+        makeTea(15);
+        washClothes();
+    
+        let x = calc(12);
+        console.log(x);
+    
+        console.log(calc(7));
+    </script>
+    
+</body>
+</html>
