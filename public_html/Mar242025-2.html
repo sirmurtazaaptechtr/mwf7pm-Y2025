@@ -9,49 +9,65 @@
 
     <h1>Add Students</h1>
     <form>
-        <label for=""><b>Enter Name</b></label>
+        <label for="fullName"><b>Enter Name</b></label>
         <input type="text" id="fullName" name="full_name">
         <input type="submit" value="Add" id="addBtn">        
     </form>
     <ul id="showBox"></ul>
     
-
     <script>
+        // Get references to HTML elements
         const addBtn = document.getElementById('addBtn');
         const fullName = document.getElementById('fullName');
         const showBox = document.getElementById('showBox');
+        
+        // Array to store names
         let namesArr = [];
 
-        function showNames () {
+        // Function to display stored names from localStorage
+        function showNames() {
             let namesObj = localStorage.getItem("names");
-            if(namesObj != null) {
-                namesArr = JSON.parse(namesObj);
-
-                namesArr.forEach(function (element,index) {
+            
+            // Check if there are names stored in localStorage
+            if (namesObj != null) {
+                namesArr = JSON.parse(namesObj); // Convert stored string back to an array
+                
+                // Display each name in an unordered list
+                namesArr.forEach(function (element, index) {
                     showBox.innerHTML += `<li id="${index}">${element}</li>`;
                 });
-            }else {
+            } else {
+                // If no names are stored, display a message
                 showBox.innerHTML = `<p>No names to show</p>`;
             }
         }
+        
+        // Call function to display names on page load
         showNames();
 
-        addBtn.addEventListener("click", function () {
+        // Event listener for the "Add" button
+        addBtn.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent form from reloading the page
+
             let namesObj = localStorage.getItem("names");
-            if(namesObj != null) {
+            
+            // If there are stored names, retrieve and update them
+            if (namesObj != null) {
                 namesArr = JSON.parse(namesObj);
+                namesArr.push(fullName.value); // Add new name to the array
+                namesObj = JSON.stringify(namesArr); // Convert back to string
+                localStorage.setItem("names", namesObj); // Store updated data
+            } else {
+                // If no names are stored, initialize and save the new name
                 namesArr.push(fullName.value);
                 namesObj = JSON.stringify(namesArr);
-                localStorage.setItem("names",namesObj);
-            }else {
-                namesArr.push(fullName.value);
-                namesObj = JSON.stringify(namesArr);
-                localStorage.setItem("names",namesObj);
+                localStorage.setItem("names", namesObj);
             }
+
+            // Clear existing list and re-display names
+            showBox.innerHTML = "";
             showNames();
         });
-
-
 
     </script>
 </body>
