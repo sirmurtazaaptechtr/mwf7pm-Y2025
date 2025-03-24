@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Add Students</h1>
+    <form>
+        <label for=""><b>Enter Name</b></label>
+        <input type="text" id="fullName" name="full_name">
+        <input type="submit" value="Add" id="addBtn">        
+    </form>
+    <ul id="showBox"></ul>
+    
+
+    <script>
+        const addBtn = document.getElementById('addBtn');
+        const fullName = document.getElementById('fullName');
+        const showBox = document.getElementById('showBox');
+        let namesArr = [];
+
+        function showNames () {
+            let namesObj = localStorage.getItem("names");
+            if(namesObj != null) {
+                namesArr = JSON.parse(namesObj);
+
+                namesArr.forEach(function (element,index) {
+                    showBox.innerHTML += `<li id="${index}">${element}</li>`;
+                });
+            }else {
+                showBox.innerHTML = `<p>No names to show</p>`;
+            }
+        }
+        showNames();
+
+        addBtn.addEventListener("click", function () {
+            let namesObj = localStorage.getItem("names");
+            if(namesObj != null) {
+                namesArr = JSON.parse(namesObj);
+                namesArr.push(fullName.value);
+                namesObj = JSON.stringify(namesArr);
+                localStorage.setItem("names",namesObj);
+            }else {
+                namesArr.push(fullName.value);
+                namesObj = JSON.stringify(namesArr);
+                localStorage.setItem("names",namesObj);
+            }
+            showNames();
+        });
+
+
+
+    </script>
+</body>
+</html>

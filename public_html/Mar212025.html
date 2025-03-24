@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="res"></div>
+    
+    <script>
+        const res = document.getElementById('res');
+
+        // JavaScript Strings
+        let str = "";
+        str = "Hamiz";
+        str = 'Muzammil786'
+
+        res.innerHTML = `<p>"${str}" is of type "${typeof(str)}"</p>`;
+        
+        // String Length
+        
+        let len = str.length;
+        
+        res.innerHTML += `<p>"${str}" has "${len} characters in it."</p>`;
+        
+
+    </script>
+</body>
+</html>
