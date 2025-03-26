@@ -23,6 +23,72 @@
         let len = str.length;
         
         res.innerHTML += `<p>"${str}" has "${len} characters in it."</p>`;
+
+        let text = "We are the so-called \"Vikings\" from the north.";
+        text= 'It\'s alright.';
+
+        let ch = text.charAt(5);
+        let cd = text.charCodeAt(5);
+        let c = text.at(5);
+
+        console.log(ch);
+        console.log(cd);
+        console.log(c);
+
+        let sub = text.slice(5,8);
+        console.log(sub);
+
+        sub = text.slice(5);
+        console.log(sub);
+        
+        console.log(text.substring(5, 12));
+
+        console.log(text.toUpperCase());
+        console.log(text.toLowerCase());
+        console.log(text.concat(" ", "Muzammil"));
+
+        text1 = "      Hello World!      "
+        console.log(text1);
+        console.log(text1.trim());
+        console.log(text1.trimStart());
+        console.log(text1.trimEnd());
+
+        let phone = "3142308332";
+        console.log(phone);
+
+        phone = phone.padStart(13,"+92")
+        console.log(phone);
+
+        console.log(phone.repeat(4));
+
+        console.log(phone.replace("+92","+91"));
+
+        let names = "Qaim, Hamiz, Muzammil, Shaharyar";
+
+        console.log(names);
+        console.log(names.length);
+        
+        let namesArr = names.split(",");
+        console.log(namesArr);
+
+        console.log(namesArr.length);
+        console.log(namesArr.toString());
+        console.log(namesArr[1]);
+
+        namesArr.push("Anas");
+        namesArr.unshift("Rahim");
+
+        console.log(namesArr); 
+        
+        namesArr.pop();
+        namesArr.shift();       
+
+        console.log(namesArr); 
+        
+        namesArr.splice(2,0,"Anas","Rahim")
+        console.log(namesArr); 
+        
+
         
 
     </script>
