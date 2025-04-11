@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Arrays Methods</title>
+</head>
+<body>
+    <marquee behavior="scroll" direction="left" id="dt"></marquee>
+
+    <div id="resultBox"></div>
+    <p onmouseover="changeColor(this)">this is a simple paragraph</p>
+    
+    <script>                
+        console.log("JS is working");
+
+        const myArr = ["Qaim","Hamiz","Muzammil","Anas","Raahim"];
+        console.log(myArr);
+
+        myArr.push("Shahryar");
+        console.log(myArr);
+        
+        myArr.pop();
+        console.log(myArr);
+        
+        myArr.unshift("Shahryar");
+        console.log(myArr);
+        
+        myArr.shift();
+        console.log(myArr);
+        
+        myArr.splice(2,0,"Shahryar");
+        console.log(myArr);
+        
+        myArr.splice(2,1);
+        console.log(myArr);
+        
+        myArr.push({name:"Syed Murtaza Hussain",dob:"03-Jul-1983"});
+        console.log(myArr);
+        
+        myArr.pop();
+        console.log(myArr);
+        
+        const resultBox = document.getElementById("resultBox");
+        console.log(resultBox);
+        
+        resultBox.innerHTML = `<h2>Student List</h2>`;
+
+        myArr.forEach((element,index) => {
+            console.log(`${index+1}. ${element}`);
+            resultBox.innerHTML += `<p  onmouseenter="eColor(this)" onmouseleave="lColor(this)">${index+1}. ${element}</p>`;
+        });
+        
+        resultBox.style.fontFamily = 'cursive';
+        resultBox.style.color = 'tomato';
+        resultBox.style.backgroundColor = 'black';
+        resultBox.style.padding = '16px'
+        
+        function  eColor (e) {
+            e.style.color = 'white';
+        }
+
+        function  lColor (e) {
+            e.style.color = 'tomato';
+        }
+
+        function changeColor (e) {
+            e.style.color = 'white';
+            e.style.backgroundColor = 'black';
+        }
+
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
+        const dt = document.getElementById('dt');
+
+        setInterval(function () {
+            let dateTime = new Date();
+            dt.innerText = dateTime;
+
+            // let dateSimple = dateTime.toLocaleDateString();
+            // dt.innerText = dateSimple;
+            
+            // let date = String(dateTime.getDate());
+            // dt.innerText = date;
+
+            // let month = String(dateTime.getMonth())
+            // dt.innerText = month;
+
+            // let day = String(dateTime.getDay())
+            // dt.innerText = days[day];
+        },1000)
+    </script>
+</body>
+</html>

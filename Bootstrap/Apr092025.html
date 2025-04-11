@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Text/Typography</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        table tbody {
+            counter-reset: cnt;
+        }
+
+        table tbody tr td:first-child::before {
+            counter-increment: cnt;
+            content: counter(cnt);
+        }
+        .mycolor {
+            background-color: rgb(13, 92, 66) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bootstrap 5 Text/Typography</h1>
+    <div class="container">
+        <h2>Headings</h2>
+        <h1>Heading Level 1</h1>
+        <h2>Heading Level 2</h2>
+        <h3>Heading Level 3</h3>
+        <h4>Heading Level 4</h4>
+        <h5>Heading Level 5</h5>
+        <h6>Heading Level 6</h6>
+        <div class="h1">Heading Level 1 by class</div>
+        <div class="h2">Heading Level 2 by class</div>
+        <div class="h3">Heading Level 3 by class</div>
+        <div class="h4">Heading Level 4 by class</div>
+        <div class="h5">Heading Level 5 by class</div>
+        <div class="h6">Heading Level 6 by class</div>
+
+        <h1 class="display-1">Display Heading Leavel 1</h1>
+        <h1 class="display-2">Display Heading Leavel 2</h1>
+        <h1 class="display-3">Display Heading Leavel 3</h1>
+        <h1 class="display-4">Display Heading Leavel 4</h1>
+        <h1 class="display-5">Display Heading Leavel 5</h1>
+        <h1 class="display-6">Display Heading Leavel 6</h1>
+
+        <h1>Main Text <small>secondary text</small></h1>
+        <h1>Main Text <span class="small">secondary text</span></h1>
+
+        <p>Use the mark element to <mark>highlight text</mark>.</p>
+        <p>Use the mark element to <span class="mark">highlight text</span>.</p>
+
+        <p>The <abbr title="World Health Organizaiton">WHO</abbr> was founded in 1948.</p>
+        <p>We are studying <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr
+                title="Cascading Stylesheet">CSS</abbr> and <abbr title="JavaScript">JS</abbr></p>
+
+        <blockquote class="blockquote m-5 p-5 border border-3 border-danger-subtle rounded">
+            <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation
+                organization, WWF works in 100 countries and is supported by 1.2 million members in the United States
+                and close to 5 million globally.</p>
+            <footer class="blockquote-footer">From WWF's website</footer>
+        </blockquote>
+
+        <dl>
+            <dt>Cofee</dt>
+            <dd>-black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>-white cold drink</dd>
+        </dl>
+        <p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section
+            in a document.</p>
+
+        <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+
+        <pre>
+            Text in a pre element
+            is displayed in a fixed-width
+            font, and it preserves
+            both      spaces and
+            line breaks.
+        </pre>
+
+        <p class="text-uppercase text-nowrap	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+            laboriosam ratione voluptas labore magnam ut ex quam assumenda veniam officia molestias illum voluptatibus
+            aspernatur, quasi consequuntur repellendus facilis provident facere.</p>
+
+        <p class="text-muted">This text is muted.</p>
+
+        <p class="text-primary">This text is important.</p>
+
+        <p class="text-success">This text indicates success.</p>
+
+        <p class="text-info">This text represents some information.</p>
+
+        <p class="text-warning">This text represents a warning.</p>
+
+        <p class="text-danger">This text represents danger.</p>
+
+        <p class="text-secondary">Secondary text.</p>
+
+        <p class="text-dark bg-light">Dark grey text.</p>
+
+        <p class="text-body bg-danger">Body text.</p>
+
+        <p class="text-light">Light grey text.</p>
+
+        <p class="text-bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nisi doloribus esse
+            qui quas minima! Ex dolore id eveniet odit quasi rem repudiandae provident quos, tempore dolorem quisquam,
+            incidunt excepturi!</p>
+
+        <h1 class="display-3">Personal information Card</h1>
+        <table class="table table-hover table-striped border table-sm">
+            <thead>
+                <tr class="table-danger">
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>email</th>
+                    <th>Area</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>. </td>
+                    <td>Muhammad Shahryar</td>
+                    <td>+92-304-3637362</td>
+                    <td>
+                        <a href="mailto:mshehriyar7860@gmail.com">mshehriyar7860@gmail.com</a>
+                    </td>
+                    <td>Tariq Road</td>
+                </tr>
+                <tr>
+                    <td>. </td>
+                    <td>Hamiz Nadeem</td>
+                    <td>+92-324-2806107</td>
+                    <td>
+                        <a href="mailto:hamiznadeem137@gmail.com">hamiznadeem137@gmail.com</a>
+                    </td>
+                    <td>Clifton</td>
+                </tr>
+                <tr>
+                    <td>. </td>
+                    <td>Muzammil Ahmed</td>
+                    <td>+92-300-9298525</td>
+                    <td>
+                        <a href="mailto:muzammilsuperpower@gmail.com">muzammilsuperpower@gmail.com</a>
+                    </td>
+                    <td>Kashmir Road</td>
+                </tr>
+                <tr>
+                    <td>. </td>
+                    <td>Anas Qureshi</td>
+                    <td>+92-312-2319762</td>
+                    <td>
+                        <a href="mailto:anasqureshi2003@icloud.com">anasqureshi2003@icloud.com</a>
+                    </td>
+                    <td>SMCHS</td>
+                </tr>
+                <tr>
+                    <td>. </td>
+                    <td>Qaim Raza</td>
+                    <td>+92-310-1083391</td>
+                    <td>
+                        <a href="mailto:qaimraza95@gmail.com">qaimraza95@gmail.com</a>
+                    </td>
+                    <td>PIB Colony</td>
+                </tr>
+                <tr>
+                    <td>. </td>
+                    <td>Mirza Muhammad Raahim Baig</td>
+                    <td>+92-370-2724828</td>
+                    <td>
+                        <a href="mailto:raahimmirza144@gmail.com">raahimmirza144@gmail.com</a>
+                    </td>
+                    <td>PECHS</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Bootstrap 5 Images</h2>
+        <h3>Image Shapes</h3>
+        <div class="text-bg-warning text-center p-3 mycolor">
+            <img src="images/cinqueterre.jpg" alt="Cinque Terre" width="250" height="250">
+            <img src="images/newyork.jpg" alt="New York" class="rounded" width="250" height="250">
+            <img src="images/paris.jpg" alt="Paris" class="rounded-circle" width="250" height="250">
+            <img src="images/sanfran.jpg" alt="San Francisco" class="img-thumbnail" width="250" height="250">
+        </div>
+        <div class="bg-info overflow-auto">
+            <img src="images/newyork.jpg" alt="New York" class="float-end" width="250" height="250">
+            <img src="images/paris.jpg" alt="Paris" class="float-start" width="250" height="250">
+        </div>
+        <div class="bg-warning">
+            <img src="images/cinqueterre.jpg" alt="Cinque Terre" class="mx-auto d-block">
+        </div>
+        <div>
+            <img class="img-fluid" src="images/ny.jpg" alt="New York">
+        </div>
+
+        <div class="text-bg-danger my-5 p-5 rounded w-75 mx-auto">
+            <h1 class="display-3 my-3">Jumbotron Example</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..
+            </p>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
